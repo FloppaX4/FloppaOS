@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloppaOS</title>
+    <style>
+        :root {
+            --bg-color: #030712;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #0ea5e9;
+            --accent-hover: #0284c7;
+            --card-bg: #0b0f19;
+            --card-border: #1e293b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Barra de navegación */
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 25px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Logo más grande y movido sutilmente a la izquierda */
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            background-image: url('1000019108.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: -10px; 
+        }
+
+        /* Sección principal (Hero) */
+        .hero {
+            max-width: 1200px;
+            margin: 20px auto 60px auto;
+            padding: 0 50px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin: 0 0 35px 0;
+        }
+
+        .download-btn {
+            background-color: var(--accent-blue);
+            color: #ffffff;
+            padding: 14px 32px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Cuadrícula inferior de 2 columnas */
+        .features {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px 60px 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+            white-space: pre-line;
+        }
+
+        /* Pie de página */
+        footer {
+            max-width: 1200px;
+            margin: auto auto 30px auto;
+            padding: 0 50px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsivo para celulares */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            nav, .hero, .features, footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#" class="logo-container">
+            <span class="logo-icon"></span>
+            <span>FloppaOS</span>
+        </a>
+    </nav>
+
+    <!-- Sección Hero principal -->
+    <div class="hero">
+        <h1>Rapido, libre y Funcional</h1>
+        <p>Usa FloppaOS para todo</p>
+        
+        <a href="#" class="download-btn">PROXIMO</a>
+    </div>
+
+    <!-- Columnas inferiores -->
+    <div class="features">
+        <div class="feature-card">
+            <h3>Sistemas</h3>
+            <p>Para sistemas x86_64 de Intel y AMD</p>
+        </div>
+        <div class="feature-card">
+            <h3>Requisitos (No Oficial)</h3>
+            <p>Espacio de almacenamiento
+Mínimo: 20 GB
+Recomendado: 40 GB a 50 GB libres
+
+Memoria RAM
+Mínimo: 2 GB
+Recomendado: 4 GB a 8 GB
+
+Procesador (CPU)
+Mínimo: 2 núcleos (64-bit, 2.0 GHz)
+Recomendado: 4 núcleos o más</p>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Distro de Linux 80 system</p>
+    </footer>
+
+</body>
+</html>
